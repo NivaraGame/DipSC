@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>DipSC</title>
+</head>
+<body>
+<!-- +source file name, sheet name, +group, +template -->
+<div class="main">
+    <div class="flex-row">
+        <label for="source">Ресурс: </label>
+        <p id="source"></p>
+    </div>
+    <button class="button" onclick="choose_file('source')">Обрати файл</button>
+
+    <div id="sheet_name"><label>
+    </label></div>
+
+    <div class="flex-row">
+        <label for="template">Зразок: </label>
+        <p id="template"></p>
+    </div>
+    <button class="button" onclick="choose_file('template')">Обрати файл</button>
+
+    <label for="group">Номер групи: </label>
+    <input id="group" type="number" onchange="set_group()">
+
+    <div class="flex-row">
+        <label for="dist">Каталог призначення: </label>
+        <p id="dist"></p>
+    </div>
+    <button class="button" onclick="choose_folder()">Обрати каталог</button>
+
+    <button class="button" type="button" id="add" onclick="start()">
+        Старт
+    </button>
+</div>
+</body>
+</html>
